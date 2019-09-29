@@ -1,0 +1,66 @@
+<!DOCTYPE html> 
+<html> 
+
+<body style="text-align:center;"> 
+	<h1 style="color:green;"> 
+			Клиника Доктор Пилюлькин
+		</h1> 
+
+	<h2> 
+	Введите вашу ДНК	 
+</h2> 
+
+
+
+	Текст: 
+	<input type="text"
+		id="myText"
+		value="GCTA"> 
+
+	<button type="button"
+			onclick="myFunction()"> 
+	Получить РНК 
+</button> 
+	<h2> 
+	Ваша РНК	 
+</h2> 
+
+	<p id="rnk"></p> 
+
+	<script> 
+		// Here the value is stored in new variable x 
+
+		function myFunction() { 
+			var str = 
+				document.getElementById("myText").value; 
+			  let result = '';
+  for (let i = 0; i < str.length; i++) {
+    if (str[i].toUpperCase() === 'G') {
+      result += 'C';
+    }
+    else if (str[i].toUpperCase() === 'C') {
+      result += 'G';
+    }
+    else if (str[i].toUpperCase() === 'T') {
+      result += 'A';
+    }
+    else if (str[i].toUpperCase() === 'A') {
+      result += 'U';
+    }
+	else {
+      result += '_';
+    }
+  }
+ 
+			
+			document.getElementById( 
+			"rnk").innerHTML = result; 
+		} 
+	</script> 
+<h2> 
+Сделано by Дарья Герасимова	 
+</h2>
+</body> 
+
+</html> 
+
