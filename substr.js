@@ -1,12 +1,12 @@
 const str = 'abba';
-const getLength = str => str.length;
+const getLength = str => str.length;  //  длина строки
  
 const substr = (str , start = 0, end = getLength(str)) => {
   if (end<0){
     end = start+1;
   }
   
-  if (start < 0 ) {
+  if (start < 0 ) {  // отрицательная
     start = 0;
   }
   
@@ -16,7 +16,7 @@ const substr = (str , start = 0, end = getLength(str)) => {
   }
   
   let result = '';
-  for (start; start<end; start++){
+  for (start; start<end; start++){ 
     result += str[start];
     //console.log(start,end);
   }
@@ -26,4 +26,4 @@ const substr = (str , start = 0, end = getLength(str)) => {
 substr(str,0,1);
 
 
-export default substr;
+export default substr; // экспорт по умолчанию
