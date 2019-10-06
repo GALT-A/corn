@@ -16,3 +16,6 @@ const isPalindrome = (string) => {
   return isPalindrome(stringWithoutFirstAndLastSymbols);
 };
 isPalindrome('radar');
+
+
+export default isPalindrome;
